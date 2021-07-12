@@ -1,0 +1,24 @@
+<h2>Lista de Pessoas</h2>
+<br/>
+<button (click)="navegar()">Novo</button>
+<br/>
+<table>
+  <thead>
+  <tr>
+    <td>id</td>
+    <td>nome</td>
+    <td>idade</td>
+    <td>data nascimento</td>
+    <td>capital</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pessoa of pessoas | async">
+    <td>{{pessoa.id}}</td>
+    <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.idade | number:'2.0-0'}}</td><!-- pipes -->
+    <td>{{pessoa.dataNascimento | date:'yyyy-MM-dd'}}</td>
+    <td>{{pessoa.capital | currency:'EUR':'symbol':'6.2-2'}}</td>
+  </tr>
+  </tbody>
+</table>

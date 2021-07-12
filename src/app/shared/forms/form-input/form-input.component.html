@@ -1,0 +1,5 @@
+<span>{{label}}: </span><input *ngIf="min !== ''" [type]="type" [min]="min" [max]="max" [step]="step"
+                               [(ngModel)]="valorInterno"><input
+  *ngIf="min === ''"
+  [type]="type" [(ngModel)]="valorInterno">
+

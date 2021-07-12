@@ -1,0 +1,17 @@
+<app-form [title]="'Nova Pessoa'" (emitterForm)="salvar()" [labelButton]="'Salvar'">
+  <app-form-input [type]="'text'" [label]="'Nome'" [(valor)]="pessoa.nome"></app-form-input>
+  <br/>
+  <br/>
+  <app-form-input [type]="'number'" [min]="'0'" [max]="'99'"
+                  [step]="'1'" [label]="'Idade'" [(valor)]="pessoa.idade"></app-form-input>
+  <br/>
+  <br/>
+  <app-form-input [type]="'date'" [label]="'Data Nascimento'" [(valor)]="pessoa.dataNascimento"></app-form-input>
+  <br/>
+  <br/>
+  <app-form-input [type]="'number'" [label]="'Capital'" [min]="'0.00'" [max]="'100000.00'"
+                  [step]="'0.01'" [(valor)]="pessoa.capital"></app-form-input>
+  <br/>
+  <br/>
+</app-form>
+<button (click)="voltar()">Voltar</button>
